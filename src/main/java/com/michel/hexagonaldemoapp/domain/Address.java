@@ -9,23 +9,23 @@ import static java.text.MessageFormat.format;
 public class Address {
     @Setter private String streetName;
     @Setter private String streetNumber;
-    private String postalCode;
+    private String zipCode;
     @Setter private String city;
     @Setter private String country;
 
-    public Address(final String streetName, final String streetNumber, final String postalCode, final String city,
+    public Address(final String streetName, final String streetNumber, final String zipCode, final String city,
                    final String country) {
         this.streetName = streetName;
         this.streetNumber = streetNumber;
-        setPostalCode(postalCode);
+        setZipCode(zipCode);
         this.city = city;
         this.country = country;
     }
 
-    public void setPostalCode(String postalCode) {
-        if(!postalCode.trim().toUpperCase().matches("^[0-9]{4}[A-Z]{2}")) {
-            throw new IllegalArgumentException(format("Invalid postal code: " + postalCode));
+    public void setZipCode(String zipCode) {
+        if(!zipCode.trim().toUpperCase().matches("^[0-9]{4}[A-Z]{2}")) {
+            throw new IllegalArgumentException(format("Invalid postal code: " + zipCode));
         }
-        this.postalCode = postalCode.trim();
+        this.zipCode = zipCode.trim();
     }
 }

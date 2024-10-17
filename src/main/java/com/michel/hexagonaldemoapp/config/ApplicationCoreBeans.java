@@ -35,7 +35,7 @@ public class ApplicationCoreBeans {
     }
 
     @Bean
-    public AddProductsToShoppingCartUseCase getShoppingCartUseCase(
+    public AddProductsToShoppingCartUseCase addProductsToShoppingCartUseCase(
             final GetShoppingCartPort getShoppingCartPort,
             final FindProductsPort findProductsPort,
             final UpdateShoppingCartPort updateShoppingCartPort

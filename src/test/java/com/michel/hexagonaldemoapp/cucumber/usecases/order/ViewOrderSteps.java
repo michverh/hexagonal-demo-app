@@ -72,7 +72,7 @@ public class ViewOrderSteps {
         assertEquals(row.get("streetName"), retrievedOrder.getShippingAddress().getStreetName());
         assertEquals(row.get("streetNumber"), retrievedOrder.getShippingAddress().getStreetNumber());
         assertEquals(row.get("city"), retrievedOrder.getShippingAddress().getCity());
-        assertEquals(row.get("postalCode"), retrievedOrder.getShippingAddress().getPostalCode());
+        assertEquals(row.get("postalCode"), retrievedOrder.getShippingAddress().getZipCode());
         assertEquals(row.get("country"), retrievedOrder.getShippingAddress().getCountry());
     }
 
@@ -83,7 +83,7 @@ public class ViewOrderSteps {
         assertEquals(row.get("streetName"), retrievedOrder.getBillingAddress().getStreetName());
         assertEquals(row.get("streetNumber"), retrievedOrder.getBillingAddress().getStreetNumber());
         assertEquals(row.get("city"), retrievedOrder.getBillingAddress().getCity());
-        assertEquals(row.get("postalCode"), retrievedOrder.getBillingAddress().getPostalCode());
+        assertEquals(row.get("postalCode"), retrievedOrder.getBillingAddress().getZipCode());
         assertEquals(row.get("country"), retrievedOrder.getBillingAddress().getCountry());
     }
 }
